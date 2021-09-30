@@ -1,0 +1,139 @@
+
+<router-outlet></router-outlet>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<div class="container-fluid">
+
+<!-- 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="goals"><b>GOALS APP</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" routerLink="goals">Goals<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" routerLink="/about">About</a>
+      </div>
+    </div>
+  </nav> -->
+
+
+  <nav class="navbar color navbar-expand-lg navbar-light bg-light container-fluid">
+    <div class="container-fluid">
+      <div class="icon">
+        <i class="fas fa-music" id="mick"></i>
+        <i class="fas fa-headphones-alt"></i>
+      </div>     
+      <a class="navbar-brand" href="/"><span class="audio">Audio</span><span class="breeze">Breeze</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">        
+          <a class="nav-item nav-link" id="userlogin" routerLink="/<app-users></app-users>" target="_blank">Users</a>  
+          <!-- <app-users></app-users> -->
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container-fluid main">
+  <h2 class="message text-center">Welcome to AudioBreeze Songs Collection</h2>
+  <div class="row">
+    <div class="col-4">
+      <h2 class="text-center song">Songs Collections</h2>
+      <div>
+        <a id="songs" href="#footer">trending songs</a>
+        <a id="songs1" href="https://www.youtube.com/watch?v=trddISEuOH8" target="_blank">Mugithi songs</a>
+        <a id="songs2" href="https://www.youtube.com/watch?v=3e20Px_ykMY" target="_blank">Rumba songs</a>
+        <a id="songs3" href="https://www.youtube.com/watch?v=zu1u6eYOWoE" target="_blank">Worship songs</a>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-8">
+          <h2 class="text-center trending">Trending Songs</h2>
+        </div>
+        <div class="col-4 trending1">
+         <button (click)="getDataForAudio()" class="btn btn-lg bg-danger">Get all audios</button>
+        </div>
+      </div>
+    
+      <div class="jumbotron bg-dark trending11">
+        <div *ngFor="let d of data.audios">
+          <div class="card" style="width: 100%;">
+            <!-- Display Videos -->
+            <div class="row">
+              <div class="col-6">
+                <div style="height: 22rem;">
+                  <div class="ratio ratio-16x9 card-img-top">
+                  
+                   <iframe class="shadow-1-strong rounded"
+                     src="https://www.youtube.com/embed/watch?v=WcrQu5mjpME&list=RDWcrQu5mjpME&start_radio=1"
+                     title="YouTube video" allowfullscreen></iframe>
+                 </div>
+               </div>
+              </div>
+              <div class="col-6">
+                <div class="card-body" style="font-size: 20px;color: black;">
+                  <h5 class="card-text"  style="font-size: 20px;">{{d.songName}}</h5>
+                  <p class="card-text"  style="font-size: 20px;">{{d.songDescription}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                 <a href="https://www.youtube.com/embed/watch?v=WcrQu5mjpME&list=RDWcrQu5mjpME&start_radio=1" target="_blank" ><h3 class="list-group-item"  style="font-size: 20px;">{{d.artistName}}</h3></a>
+                  <h3 class="list-group-item"  style="font-size: 20px;">{{d.songDuration}}</h3>
+                  <h3 class="list-group-item"  style="font-size: 20px;">{{d.songQuality}}</h3>
+                  <h3 class="list-group-item"  style="font-size: 20px;">{{d.songType}}</h3>
+                </ul>
+              </div>
+            </div>         
+            
+          </div>
+        </div>
+        
+      </div>
+      
+
+
+    </div>
+  </div>
+</div>
+<div class="container-fluid" id="footer">
+  <footer class="text-center text-white" style="background-color: #45637d;">
+    <!-- Grid container -->
+    <h3 class="text-center mysong">Most Trending song of the week</h3>
+    <div class="container p-4">
+      <!-- Section: Iframe -->
+      <section class="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6">
+            <div class="ratio ratio-16x9">
+              <iframe class="shadow-1-strong rounded" src="https://www.youtube.com/embed/vlDzYIIOYmM"
+                title="YouTube video" allowfullscreen></iframe>
+              <iframe class="shadow-1-strong rounded"
+                src="https://www.youtube.com/embed/watch?v=WcrQu5mjpME&list=RDWcrQu5mjpME&start_radio=1"
+                title="YouTube video" allowfullscreen></iframe>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section: Iframe -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="#">JoeKumsy coders.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>
