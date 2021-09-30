@@ -11,7 +11,7 @@ export class AppComponent {
 
   data:any
 
-  // users:any
+  users:any
 
   constructor(private mydata:ServiceService){
     // this.data = new Array<any>()
@@ -25,11 +25,11 @@ export class AppComponent {
       })
     }
 
-    // getusers(){
-    //   this.mydata.getUser().subscribe((users)=>{
-    //     console.log(users)
-    //     this.users=users
-    //   })
-    // } 
+    getusers(){
+      this.mydata.getUser().subscribe((users)=>{
+        console.log(users)
+        this.users=users
+      })
+    } 
   
 }

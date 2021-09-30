@@ -117,6 +117,7 @@ color: #EF5DA8;
 
 }
 
+
 #songs{
    /* trending songs */
 
@@ -268,6 +269,17 @@ color: #cccddd;
     color: #EF5DA8;
     
  }
+ .mysong2{
+      
+    font-family: Salsa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 55px;
+    line-height: 67px;
+    
+    color: #f1e9ed;
+    
+ }
  #userlogin{
      margin-left:90rem;
      text-decoration: none;
@@ -276,4 +288,8 @@ color: #cccddd;
      color: #288BA0;
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+ }
+ .collection{
+     width: 200%;
+     height: 100%;
  }
