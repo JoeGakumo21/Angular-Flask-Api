@@ -1,9 +1,4 @@
-<!-- <h1>My Users list</h1>
-<button (click)="getusers()">Get all Users</button>
-<ul *ngFor="let user of users.users">
-  <li>{{user.name}}</li>
-  <li>{{user.password}}</li>
-  <li>{{user.public_id}}</li> -->
+
 <router-outlet></router-outlet>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
@@ -14,20 +9,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <div class="container-fluid">
-
-<!-- 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" routerLink="goals"><b>GOALS APP</b></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" routerLink="goals">Goals<span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" routerLink="/about">About</a>
-      </div>
-    </div>
-  </nav> -->
 
 
   <nav class="navbar color navbar-expand-lg navbar-light bg-light container-fluid">
@@ -41,10 +22,7 @@
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">        
-          <a class="nav-item nav-link" id="userlogin" routerLink="/<app-users></app-users>" target="_blank">Users</a>  
-          <!-- <app-users></app-users> -->
-      <!-- </div>  -->
+     
     </div>
   </nav>
 </div>
@@ -70,6 +48,7 @@
         </div>
       </div>
     
+
       <div class="jumbotron bg-dark trending11">
         <div *ngFor="let d of data.audios">
           <div class="card" style="width: 100%;">
